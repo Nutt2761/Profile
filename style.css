@@ -144,4 +144,49 @@ body {
     border: 2px solid #ff69b4;
     box-shadow: 0 4px 6px rgba(255, 105, 180, 0.2);
   }
+  @media screen and (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav a {
+      display: inline-block;
+      margin: 10px 10px;
+      font-size: 1rem;
+    }
+  
+    section {
+      padding: 30px 15px;
+    }
+  
+    .project-preview,
+    .tiktok-preview-img,
+    .uxui-preview-img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    h2 {
+      font-size: 1.4rem;
+    }
+  
+    h3 {
+      font-size: 1.2rem;
+    }
+  
+    .profile-summary {
+      padding: 15px;
+    }
+  }
   
