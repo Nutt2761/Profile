@@ -5,35 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    nav a.active {
+      font-weight: bold;
+      color: #ff4081;
+    }
+    .fun-fact {
+      margin-top: 20px;
+      background-color: #fef3c7;
+      padding: 20px;
+      border-radius: 10px;
+      color: black;
+    }
+    .surprise {
+      display: none;
+      margin-top: 10px;
+      background: #e0f7fa;
+      padding: 10px;
+      border-radius: 6px;
+      animation: pop 0.5s ease;
+    }
+    @keyframes pop {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .social-links a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #2196f3;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-          <img src="profile.jpg" alt="Profile Photo" class="profile-pic" />
-          <div>
-            <h1>Nuttanicha Boonlon</h1>
-            <nav>
-              <a href="#about">About</a>
-              <a href="#projects">Projects</a>
-              <a href="#contact">Contact</a>
-            </nav>
-          </div>
-        </div>
-      </header>
-      
-      <section id="about">
-        <h2>About Me</h2>
-        <p>Hi! I'm a Computer Engineering student passionate about IoT, AI, and Web Development. I love building creative and functional applications that solve real-world problems.</p>
-      
-        <div class="profile-summary">
-          <h3> Profile Summary</h3>
-          <ul>
-            <li> Skills: C++, Flutter, PHP, SQL, Figma, IoT</li>
-            <li> Interests: IoT, AI, UX/UI, Full-Stack Dev</li>
-            <li> Goal: To become a developer who creates tech that helps people</li>
-          </ul>
-        </div>
-      </section>
+  <header>
+    <div class="header-container">
+      <img src="profile.jpg" alt="Profile Photo" class="profile-pic" />
+      <div>
+        <h1>Nuttanicha Boonlon</h1>
+        <nav id="navbar">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#fun-fact">Fun Fact</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I'm a Computer Engineering student passionate about IoT, AI, and Web Development.</p>
+    <div class="profile-summary">
+      <h3>Profile Summary</h3>
+      <ul>
+        <li>Skills: C++, Flutter, PHP, SQL, Figma, IoT</li>
+        <li>Interests: IoT, AI, UX/UI, Full-Stack Dev</li>
+        <li>Goal: To become a developer who creates tech that helps people</li>
+      </ul>
+    </div>
+  </section>
+
       <section id="projects">
         <h2>Projects</h2>
       
@@ -42,8 +76,13 @@
           <h3>🎨 ArtHub Platform</h3>
           <img src="images/arthub-preview.png" alt="ArtHub Preview" class="project-preview" />
           <img src="images/arthub-preview-2.png" alt="ArtHub Screenshot 2" class="project-preview" />
-          <p>A web app for artists to showcase and sell their artwork. Built with PHP, MySQL, and JavaScript.</p>
+          <p>
+            A web app for artists to showcase and sell their artwork. Built with PHP, MySQL, and JavaScript.<br><br>
+            ✨ Integrated AI functionality that helps artists auto-generate creative titles and descriptions for their artwork. 
+            By entering contextual descriptions, the AI intelligently suggests relevant and elegant titles and captions, enhancing content creation and saving time.
+          </p>
         </div>
+        
       
         <!-- Smart Light Project -->
         <div class="project">
@@ -104,6 +143,17 @@
     👉 <a href="https://www.figma.com/design/HQnlgH2gG5Bdr8lf3Nxrzk/MOBILE?node-id=0-1&t=TBJL1Fpq4mBId5Bs-1" target="_blank">View Full Designs on Figma</a>
   </p>
 </div>
+
+<section id="fun-fact">
+  <h2>🎉 Fun Fact</h2>
+  <div class="fun-fact">
+    <p>I used to be a hotel receptionist when I was 18.<br>I love cats + code = purrfect dev life.</p>
+    <button onclick="document.getElementById('easterEgg').style.display='block'">👉 Click me for a surprise!</button>
+    <div id="easterEgg" class="surprise">
+      🐱 Meow! You found a hidden easter egg! Never stop coding cutely! 💖
+    </div>
+  </div>
+</section>
 
       </section>
   <section id="contact">
